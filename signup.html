@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Your Wellness Journey</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Lato', sans-serif;
+            background-color: #FAF9F6;
+            color: #2D463E;
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 40px auto;
+            background-color: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+        .hero-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+        .header {
+            background-color: #E8F3E8;
+            padding: 40px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 32px;
+            margin: 0;
+            color: #2D463E;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+        .form-content {
+            padding: 50px 40px;
+            line-height: 1.8;
+            font-size: 16px;
+            color: #4A5D57;
+        }
+        .input-group {
+            margin-bottom: 25px;
+        }
+        .input-group label {
+            display: block;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #2D463E;
+            font-size: 14px;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #E0E0E0;
+            border-radius: 8px;
+            font-size: 16px;
+            font-family: 'Lato', sans-serif;
+            background-color: #F9F9F9;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+        .input-group input:focus {
+            outline: none;
+            border-color: #7DA48D;
+            background-color: #ffffff;
+            box-shadow: 0 0 0 3px rgba(125, 164, 141, 0.1);
+        }
+        .signup-button {
+            display: block;
+            width: 100%;
+            background-color: #7DA48D;
+            color: #ffffff;
+            text-decoration: none;
+            text-align: center;
+            padding: 18px 0;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-family: 'Lato', sans-serif;
+        }
+        .signup-button:hover {
+            background-color: #6B8E7A;
+        }
+        .footer {
+            background-color: #F4F7F4;
+            padding: 40px;
+            text-align: center;
+            color: #8A9A94;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .footer a {
+            color: #7DA48D;
+            text-decoration: none;
+        }
+        @media only screen and (max-width: 600px) {
+            .container {
+                width: 100% !important;
+                margin: 0 !important;
+                border-radius: 0 !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Matching Hero Image -->
+        <img src="https://images.unsplash.com/photo-1545208393-216c7fb1bba0?auto=format&fit=crop&q=80&w=1200" alt="Serene Wellness Scene" class="hero-img">
+
+        <!-- Matching Header -->
+        <div class="header">
+            <h1>Start Your Journey</h1>
+        </div>
+
+        <!-- Signup Form Content -->
+        <div class="form-content">
+            <p style="text-align: center; margin-bottom: 40px;">Join our community for weekly guided meditations and mindful practices. Breathe. You're here.</p>
+            
+            <form action="#">
+                <div class="input-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="hello@example.com" required>
+                </div>
+                <button type="submit" class="signup-button">Begin Your Practice</button>
+            </form>
+            
+            <p style="text-align: center; font-size: 14px; margin-top: 30px;">
+                Already a member? <a href="#">Log in here</a>
+            </p>
+        </div>
+
+        <!-- Matching Footer -->
+        <div class="footer">
+            <p>You received this because you're starting your wellness journey.<br>
+            Copyright &copy; 2024 Wellness Mind | <a href="#">Privacy Policy</a></p>
+        </div>
+    </div>
+</body>
+</html>
