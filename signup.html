@@ -131,7 +131,7 @@
         <div class="form-content">
             <p style="text-align: center; margin-bottom: 40px;">Join our community for weekly guided meditations and mindful practices. Breathe. You're here.</p>
             
-            <form action="#">
+            <form id="signupForm">
                 <div class="input-group">
                     <label for="name">Full Name</label>
                     <input type="text" id="name" name="name" placeholder="Enter your name" required>
@@ -142,6 +142,8 @@
                 </div>
                 <button type="submit" class="signup-button">Begin Your Practice</button>
             </form>
+
+            <div id="message" style="display: none; text-align: center; margin-top: 20px; padding: 15px; border-radius: 8px;"></div>
             
             <p style="text-align: center; font-size: 14px; margin-top: 30px;">
                 Already a member? <a href="#">Log in here</a>
@@ -154,5 +156,54 @@
             Copyright &copy; 2024 Wellness Mind | <a href="#">Privacy Policy</a></p>
         </div>
     </div>
+
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const messageDiv = document.getElementById('message');
+            const submitBtn = e.target.querySelector('button');
+
+            // Reset message
+            messageDiv.style.display = 'none';
+            messageDiv.textContent = '';
+            
+            // Disable button
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Joining...';
+
+            try {
+                const response = await fetch('/signup', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ name, email }),
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    messageDiv.style.display = 'block';
+                    messageDiv.style.backgroundColor = '#E8F3E8';
+                    messageDiv.style.color = '#2D463E';
+                    messageDiv.textContent = 'Welcome! You have successfully joined our community.';
+                    e.target.reset();
+                } else {
+                    throw new Error(data.error || 'Something went wrong');
+                }
+            } catch (error) {
+                messageDiv.style.display = 'block';
+                messageDiv.style.backgroundColor = '#FDECEA';
+                messageDiv.style.color = '#611A15';
+                messageDiv.textContent = error.message;
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Begin Your Practice';
+            }
+        });
+    </script>
 </body>
 </html>
