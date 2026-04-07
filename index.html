@@ -10,11 +10,12 @@
             margin: 0;
             padding: 0;
             font-family: 'Lato', sans-serif;
-            background-color: #FAF9F6;
-            color: #2D463E;
+            background-color: #FDF5E6; /* Old Lace / Soft Beige */
+            color: #4A3728; /* Dark brown for readability on beige */
         }
         h1, h2, h3 {
             font-family: 'Playfair Display', serif;
+            color: #D2691E; /* Chocolate / Deep Orange */
         }
         .container {
             width: 100%;
@@ -31,14 +32,15 @@
             display: block;
         }
         .header {
-            background-color: #E8F3E8;
+            background-color: #FFF5EE; /* Seashell / Very light orange-beige */
             padding: 40px;
             text-align: center;
+            border-bottom: 1px solid #FFE4C4; /* Bisque */
         }
         .header h1 {
             font-size: 32px;
             margin: 0;
-            color: #2D463E;
+            color: #E67E22; /* Carrot Orange */
             font-weight: 400;
             letter-spacing: 1px;
         }
@@ -46,7 +48,7 @@
             padding: 50px 40px;
             line-height: 1.8;
             font-size: 18px;
-            color: #4A5D57;
+            color: #5D4037;
         }
         .feature-grid {
             padding: 0 40px 40px 40px;
@@ -59,10 +61,11 @@
             width: 60px;
             height: 60px;
             margin-bottom: 15px;
+            filter: sepia(1) saturate(5) hue-rotate(-10deg); /* Warm orange tint for icons */
         }
         .cta-button {
             display: inline-block;
-            background-color: #BC8A78;
+            background-color: #F39C12; /* Orange */
             color: #ffffff;
             text-decoration: none;
             padding: 18px 40px;
@@ -70,18 +73,25 @@
             font-size: 16px;
             font-weight: 700;
             letter-spacing: 1px;
-            transition: background-color 0.3s ease;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(243, 156, 18, 0.2);
         }
         .cta-button:hover {
-            background-color: #A97A69;
+            background-color: #E67E22;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(230, 126, 34, 0.3);
         }
         .footer {
-            background-color: #F4F7F4;
+            background-color: #FFF8DC; /* Cornsilk */
             padding: 40px;
             text-align: center;
-            color: #8A9A94;
+            color: #8D6E63;
             font-size: 14px;
             line-height: 1.6;
+        }
+        .footer a {
+            color: #E67E22;
+            text-decoration: underline;
         }
         @media only screen and (max-width: 600px) {
             .container {
@@ -91,8 +101,8 @@
         }
     </style>
 </head>
-<body style="margin: 0; padding: 0; font-family: 'Lato', sans-serif; background-color: #FAF9F6; color: #2D463E;">
-    <table width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color: #FAF9F6; padding: 40px 0;">
+<body style="margin: 0; padding: 0; font-family: 'Lato', sans-serif; background-color: #FDF5E6; color: #4A3728;">
+    <table width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color: #FDF5E6; padding: 40px 0;">
         <tr>
             <td align="center">
                 <div class="container">
@@ -106,7 +116,7 @@
 
                     <!-- Body Content -->
                     <div class="body-content">
-                        <p style="margin-top: 0; font-weight: 700;">Welcome,</p>
+                        <p style="margin-top: 0; font-weight: 700; color: #D2691E;">Welcome,</p>
                         <p>We're so glad you've decided to prioritize your well-being. This space is designed to be a gentle companion on your journey toward mental wellness and inner peace.</p>
                         <p>Each week, we'll share small, mindful practices and thoughtful insights to help you navigate life with more ease and clarity.</p>
                     </div>
@@ -115,13 +125,13 @@
                     <table width="100%" cellspacing="0" cellpadding="0" border="0" class="feature-grid">
                         <tr>
                             <td width="50%" align="center" class="feature-item">
-                                <img src="https://img.icons8.com/ios/100/7DA48D/meditation-guru.png" alt="Mindfulness" class="feature-icon">
-                                <h3 style="margin: 0; color: #2D463E;">Mindfulness</h3>
+                                <img src="https://img.icons8.com/ios/100/E67E22/meditation-guru.png" alt="Mindfulness" class="feature-icon">
+                                <h3 style="margin: 0;">Mindfulness</h3>
                                 <p style="font-size: 14px; margin-top: 10px;">Weekly guided meditations for clarity.</p>
                             </td>
                             <td width="50%" align="center" class="feature-item">
-                                <img src="https://img.icons8.com/ios/100/7DA48D/spa-flower.png" alt="Self-Care" class="feature-icon">
-                                <h3 style="margin: 0; color: #2D463E;">Self-Care</h3>
+                                <img src="https://img.icons8.com/ios/100/E67E22/spa-flower.png" alt="Self-Care" class="feature-icon">
+                                <h3 style="margin: 0;">Self-Care</h3>
                                 <p style="font-size: 14px; margin-top: 10px;">Small rituals to nourish your soul.</p>
                             </td>
                         </tr>
@@ -134,14 +144,14 @@
 
                     <!-- Footer -->
                     <div class="footer">
-                        <p style="margin-top: 0;">You're exactly where you need to be today.</p>
+                        <p style="margin-top: 0; font-style: italic; color: #D2691E;">You're exactly where you need to be today.</p>
                         <div style="margin: 20px 0;">
-                            <a href="#" style="margin: 0 10px; text-decoration: none;"><img src="https://img.icons8.com/ios-glyphs/30/8A9A94/facebook-new.png" alt="FB"></a>
-                            <a href="#" style="margin: 0 10px; text-decoration: none;"><img src="https://img.icons8.com/ios-glyphs/30/8A9A94/instagram-new.png" alt="IG"></a>
-                            <a href="#" style="margin: 0 10px; text-decoration: none;"><img src="https://img.icons8.com/ios-glyphs/30/8A9A94/twitter--v1.png" alt="TW"></a>
+                            <a href="#" style="margin: 0 10px; text-decoration: none;"><img src="https://img.icons8.com/ios-glyphs/30/8D6E63/facebook-new.png" alt="FB"></a>
+                            <a href="#" style="margin: 0 10px; text-decoration: none;"><img src="https://img.icons8.com/ios-glyphs/30/8D6E63/instagram-new.png" alt="IG"></a>
+                            <a href="#" style="margin: 0 10px; text-decoration: none;"><img src="https://img.icons8.com/ios-glyphs/30/8D6E63/twitter--v1.png" alt="TW"></a>
                         </div>
                         <p>You received this email because you signed up for our wellness mailing list.<br>
-                        Copyright &copy; 2024 Wellness Mind | <a href="#" style="color: #8A9A94; text-decoration: underline;">Unsubscribe</a></p>
+                        Copyright &copy; 2024 Wellness Mind | <a href="#" style="color: #8D6E63;">Unsubscribe</a></p>
                     </div>
                 </div>
             </td>

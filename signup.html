@@ -10,11 +10,12 @@
             margin: 0;
             padding: 0;
             font-family: 'Lato', sans-serif;
-            background-color: #FAF9F6;
-            color: #2D463E;
+            background-color: #FDF5E6; /* Old Lace / Soft Beige */
+            color: #4A3728; /* Dark brown for readability */
         }
         h1, h2, h3 {
             font-family: 'Playfair Display', serif;
+            color: #D2691E; /* Deep Orange */
         }
         .container {
             width: 100%;
@@ -32,14 +33,15 @@
             display: block;
         }
         .header {
-            background-color: #E8F3E8;
+            background-color: #FFF5EE; /* Seashell */
             padding: 40px;
             text-align: center;
+            border-bottom: 1px solid #FFE4C4;
         }
         .header h1 {
             font-size: 32px;
             margin: 0;
-            color: #2D463E;
+            color: #E67E22; /* Carrot Orange */
             font-weight: 400;
             letter-spacing: 1px;
         }
@@ -47,7 +49,7 @@
             padding: 50px 40px;
             line-height: 1.8;
             font-size: 16px;
-            color: #4A5D57;
+            color: #5D4037;
         }
         .input-group {
             margin-bottom: 25px;
@@ -56,30 +58,30 @@
             display: block;
             font-weight: 700;
             margin-bottom: 8px;
-            color: #2D463E;
+            color: #4A3728;
             font-size: 14px;
         }
         .input-group input {
             width: 100%;
             padding: 15px;
-            border: 1px solid #E0E0E0;
+            border: 1px solid #FFE4C4;
             border-radius: 8px;
             font-size: 16px;
             font-family: 'Lato', sans-serif;
-            background-color: #F9F9F9;
+            background-color: #FFFAF0; /* Floral White */
             box-sizing: border-box;
             transition: all 0.3s ease;
         }
         .input-group input:focus {
             outline: none;
-            border-color: #BC8A78;
+            border-color: #F39C12;
             background-color: #ffffff;
-            box-shadow: 0 0 0 3px rgba(188, 138, 120, 0.1);
+            box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.1);
         }
         .signup-button {
             display: block;
             width: 100%;
-            background-color: #BC8A78;
+            background-color: #F39C12;
             color: #ffffff;
             text-decoration: none;
             text-align: center;
@@ -90,22 +92,25 @@
             font-weight: 700;
             letter-spacing: 1px;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            transition: all 0.3s ease;
             font-family: 'Lato', sans-serif;
+            box-shadow: 0 4px 15px rgba(243, 156, 18, 0.2);
         }
         .signup-button:hover {
-            background-color: #A97A69;
+            background-color: #E67E22;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(230, 126, 34, 0.3);
         }
         .footer {
-            background-color: #F4F7F4;
+            background-color: #FFF8DC; /* Cornsilk */
             padding: 40px;
             text-align: center;
-            color: #8A9A94;
+            color: #8D6E63;
             font-size: 14px;
             line-height: 1.6;
         }
         .footer a {
-            color: #BC8A78;
+            color: #E67E22;
             text-decoration: none;
         }
         @media only screen and (max-width: 600px) {
@@ -129,7 +134,7 @@
 
         <!-- Signup Form Content -->
         <div class="form-content">
-            <p style="text-align: center; margin-bottom: 40px;">Join our community for weekly guided meditations and mindful practices. Breathe. You're here.</p>
+            <p style="text-align: center; margin-bottom: 40px; color: #D2691E; font-weight: 700;">Join our community for weekly guided meditations and mindful practices. Breathe. You're here.</p>
             
             <form id="signupForm">
                 <div class="input-group">
@@ -146,7 +151,7 @@
             <div id="message" style="display: none; text-align: center; margin-top: 20px; padding: 15px; border-radius: 8px;"></div>
             
             <p style="text-align: center; font-size: 14px; margin-top: 30px;">
-                Already a member? <a href="#">Log in here</a>
+                Already a member? <a href="#" style="color: #E67E22; font-weight: 700;">Log in here</a>
             </p>
         </div>
 
@@ -187,8 +192,8 @@
 
                 if (response.ok) {
                     messageDiv.style.display = 'block';
-                    messageDiv.style.backgroundColor = '#F4E9E2';
-                    messageDiv.style.color = '#BC8A78';
+                    messageDiv.style.backgroundColor = '#FFF8DC';
+                    messageDiv.style.color = '#D2691E';
                     messageDiv.textContent = 'Welcome! You have successfully joined our community.';
                     e.target.reset();
                 } else {
