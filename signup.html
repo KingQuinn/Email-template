@@ -10,12 +10,12 @@
             margin: 0;
             padding: 0;
             font-family: 'Lato', sans-serif;
-            background-color: #FDF5E6; /* Old Lace / Soft Beige */
-            color: #4A3728; /* Dark brown for readability */
+            background-color: #F8FAFB; /* Misty Mist */
+            color: #333D42; /* Charcoal */
         }
         h1, h2, h3 {
             font-family: 'Playfair Display', serif;
-            color: #D2691E; /* Deep Orange */
+            color: #5D7A8C; /* Slate Blue */
         }
         .container {
             width: 100%;
@@ -24,7 +24,7 @@
             background-color: #ffffff;
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
         }
         .hero-img {
             width: 100%;
@@ -33,15 +33,15 @@
             display: block;
         }
         .header {
-            background-color: #FFF5EE; /* Seashell */
+            background-color: #F0F4F7; /* Soft Slate Grey */
             padding: 40px;
             text-align: center;
-            border-bottom: 1px solid #FFE4C4;
+            border-bottom: 1px solid #E1E8ED;
         }
         .header h1 {
             font-size: 32px;
             margin: 0;
-            color: #E67E22; /* Carrot Orange */
+            color: #5D7A8C;
             font-weight: 400;
             letter-spacing: 1px;
         }
@@ -49,7 +49,7 @@
             padding: 50px 40px;
             line-height: 1.8;
             font-size: 16px;
-            color: #5D4037;
+            color: #4A555C;
         }
         .input-group {
             margin-bottom: 25px;
@@ -58,30 +58,30 @@
             display: block;
             font-weight: 700;
             margin-bottom: 8px;
-            color: #4A3728;
+            color: #333D42;
             font-size: 14px;
         }
         .input-group input {
             width: 100%;
             padding: 15px;
-            border: 1px solid #FFE4C4;
+            border: 1px solid #E1E8ED;
             border-radius: 8px;
             font-size: 16px;
             font-family: 'Lato', sans-serif;
-            background-color: #FFFAF0; /* Floral White */
+            background-color: #F9FBFC;
             box-sizing: border-box;
             transition: all 0.3s ease;
         }
         .input-group input:focus {
             outline: none;
-            border-color: #F39C12;
+            border-color: #7895B2;
             background-color: #ffffff;
-            box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.1);
+            box-shadow: 0 0 0 3px rgba(120, 149, 178, 0.1);
         }
         .signup-button {
             display: block;
             width: 100%;
-            background-color: #F39C12;
+            background-color: #7895B2;
             color: #ffffff;
             text-decoration: none;
             text-align: center;
@@ -94,23 +94,23 @@
             cursor: pointer;
             transition: all 0.3s ease;
             font-family: 'Lato', sans-serif;
-            box-shadow: 0 4px 15px rgba(243, 156, 18, 0.2);
+            box-shadow: 0 4px 15px rgba(120, 149, 178, 0.2);
         }
         .signup-button:hover {
-            background-color: #E67E22;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(230, 126, 34, 0.3);
+            background-color: #5D7A8C;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(93, 122, 140, 0.3);
         }
         .footer {
-            background-color: #FFF8DC; /* Cornsilk */
+            background-color: #F0F4F7;
             padding: 40px;
             text-align: center;
-            color: #8D6E63;
+            color: #7A868C;
             font-size: 14px;
             line-height: 1.6;
         }
         .footer a {
-            color: #E67E22;
+            color: #7895B2;
             text-decoration: none;
         }
         @media only screen and (max-width: 600px) {
@@ -134,7 +134,7 @@
 
         <!-- Signup Form Content -->
         <div class="form-content">
-            <p style="text-align: center; margin-bottom: 40px; color: #D2691E; font-weight: 700;">Join our community for weekly guided meditations and mindful practices. Breathe. You're here.</p>
+            <p style="text-align: center; margin-bottom: 40px; color: #5D7A8C; font-weight: 700;">Join our community for weekly guided meditations and mindful practices. Breathe. You're here.</p>
             
             <form id="signupForm">
                 <div class="input-group">
@@ -151,7 +151,7 @@
             <div id="message" style="display: none; text-align: center; margin-top: 20px; padding: 15px; border-radius: 8px;"></div>
             
             <p style="text-align: center; font-size: 14px; margin-top: 30px;">
-                Already a member? <a href="#" style="color: #E67E22; font-weight: 700;">Log in here</a>
+                Already a member? <a href="#" style="color: #7895B2; font-weight: 700;">Log in here</a>
             </p>
         </div>
 
@@ -192,8 +192,8 @@
 
                 if (response.ok) {
                     messageDiv.style.display = 'block';
-                    messageDiv.style.backgroundColor = '#FFF8DC';
-                    messageDiv.style.color = '#D2691E';
+                    messageDiv.style.backgroundColor = '#F0F4F7';
+                    messageDiv.style.color = '#5D7A8C';
                     messageDiv.textContent = 'Welcome! You have successfully joined our community.';
                     e.target.reset();
                 } else {
