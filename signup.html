@@ -9,9 +9,37 @@
         body {
             margin: 0;
             padding: 0;
+            position: relative;
+            overflow-x: hidden;
+            min-height: 100vh;
             font-family: 'Lato', sans-serif;
-            background-color: #FFF8E8; /* Sunlit cream */
+            background:
+                radial-gradient(circle at top left, rgba(255, 241, 204, 0.9), transparent 35%),
+                radial-gradient(circle at 85% 15%, rgba(255, 234, 188, 0.7), transparent 28%),
+                linear-gradient(180deg, #FFF9EE 0%, #FFF8E8 45%, #FFF5E1 100%);
             color: #4F4034; /* Warm walnut */
+        }
+        body::before,
+        body::after {
+            content: "";
+            position: fixed;
+            width: 260px;
+            height: 260px;
+            border-radius: 50%;
+            pointer-events: none;
+            filter: blur(22px);
+            opacity: 0.55;
+            z-index: 0;
+        }
+        body::before {
+            top: 40px;
+            left: -90px;
+            background: rgba(255, 233, 168, 0.65);
+        }
+        body::after {
+            right: -80px;
+            bottom: 40px;
+            background: rgba(248, 209, 140, 0.45);
         }
         h1, h2, h3 {
             font-family: 'Playfair Display', serif;
@@ -21,19 +49,59 @@
             width: 100%;
             max-width: 600px;
             margin: 40px auto;
+            position: relative;
             background-color: #ffffff;
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 4px 25px rgba(153, 97, 42, 0.07);
+            border: 1px solid rgba(242, 222, 156, 0.55);
+            z-index: 1;
+        }
+        .container::before {
+            content: "";
+            position: absolute;
+            top: -90px;
+            right: -90px;
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 235, 170, 0.65) 0%, rgba(255, 235, 170, 0) 70%);
+            pointer-events: none;
+        }
+        .hero-wrap {
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-wrap::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(255, 249, 238, 0.08) 0%, rgba(168, 106, 31, 0.18) 100%);
+        }
+        .hero-whisper {
+            position: absolute;
+            left: 24px;
+            bottom: 22px;
+            padding: 10px 16px;
+            border-radius: 999px;
+            background: rgba(255, 248, 232, 0.78);
+            border: 1px solid rgba(242, 222, 156, 0.8);
+            color: #99612A;
+            font-size: 12px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            backdrop-filter: blur(10px);
+            z-index: 1;
         }
         .hero-img {
             width: 100%;
-            height: 250px;
+            height: 270px;
             object-fit: cover;
             display: block;
+            filter: saturate(0.95) brightness(1.02);
         }
         .header {
-            background-color: #FFF1CC; /* Soft butter yellow */
+            background: linear-gradient(180deg, #FFF4D8 0%, #FFF0C8 100%);
             padding: 40px;
             text-align: center;
             border-bottom: 1px solid #F2DE9C;
@@ -50,6 +118,33 @@
             line-height: 1.8;
             font-size: 16px;
             color: #5F5044;
+        }
+        .dream-intro {
+            margin-bottom: 45px;
+            padding: 28px 24px;
+            text-align: center;
+            color: #5F5044;
+            background: linear-gradient(180deg, rgba(255, 251, 239, 0.96) 0%, rgba(255, 247, 224, 0.92) 100%);
+            border: 1px solid rgba(242, 222, 156, 0.7);
+            border-radius: 20px;
+            box-shadow: 0 14px 35px rgba(191, 134, 27, 0.08);
+        }
+        .dream-intro h2 {
+            font-size: 22px;
+            color: #A86A1F;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+        .dream-intro .quote {
+            font-style: italic;
+            margin-bottom: 20px;
+            color: #8B7862;
+        }
+        .dream-divider {
+            width: 72px;
+            height: 2px;
+            margin: 18px auto 22px;
+            background: linear-gradient(90deg, rgba(217, 164, 65, 0), rgba(217, 164, 65, 0.95), rgba(217, 164, 65, 0));
         }
         .input-group {
             margin-bottom: 25px;
@@ -119,13 +214,26 @@
                 margin: 0 !important;
                 border-radius: 0 !important;
             }
+            .dream-intro {
+                padding: 24px 20px;
+                border-radius: 18px;
+            }
+            .hero-whisper {
+                left: 16px;
+                right: 16px;
+                bottom: 16px;
+                text-align: center;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <!-- Matching Hero Image -->
-        <img src="https://images.unsplash.com/photo-1545208393-216c7fb1bba0?auto=format&fit=crop&q=80&w=1200" alt="Serene Wellness Scene" class="hero-img">
+        <div class="hero-wrap">
+            <img src="https://images.unsplash.com/photo-1545208393-216c7fb1bba0?auto=format&fit=crop&q=80&w=1200" alt="Serene Wellness Scene" class="hero-img">
+            <div class="hero-whisper">A softer place to land</div>
+        </div>
 
         <!-- Matching Header -->
         <div class="header">
@@ -134,9 +242,10 @@
 
         <!-- Signup Form Content -->
         <div class="form-content">
-            <div style="text-align: center; margin-bottom: 45px; color: #5F5044;">
-                <h2 style="font-size: 22px; color: #A86A1F; margin-bottom: 20px; font-weight: 400;">The Path to Inner Peace</h2>
-                <p style="font-style: italic; margin-bottom: 20px; color: #8B7862;">"Peace is not a distant place to reach, but a quiet light waiting to be remembered within."</p>
+            <div class="dream-intro">
+                <h2>The Path to Inner Peace</h2>
+                <div class="dream-divider"></div>
+                <p class="quote">"Peace is not a distant place to reach, but a quiet light waiting to be remembered within."</p>
                 <p style="margin-bottom: 15px;">Sometimes peace arrives like morning light through a window, soft and almost unnoticed, touching the parts of us that have grown tired from carrying too much for too long. It asks for nothing grand, only a pause, a breath, a willingness to return to yourself.</p>
                 <p style="margin-bottom: 15px;">In that stillness, the noise of the world begins to loosen its grip. Your thoughts become gentler, your heart a little quieter, and the path ahead no longer feels so heavy. What you seek has never been far away; it has been resting patiently beneath the surface, waiting for you to listen.</p>
                 <p style="margin-top: 20px; font-weight: 700; color: #A86A1F;">Take a breath, soften into this moment, and join us on the journey inward.</p>
