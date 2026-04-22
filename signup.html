@@ -41,6 +41,93 @@
             bottom: 40px;
             background: rgba(248, 209, 140, 0.45);
         }
+        .sparkles {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+        .sparkle {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.95) 0%, rgba(255, 242, 196, 0.75) 40%, rgba(255, 242, 196, 0) 72%);
+            box-shadow: 0 0 18px rgba(255, 233, 168, 0.5);
+            opacity: 0;
+            animation: twinkleFloat 10s ease-in-out infinite;
+        }
+        .sparkle::before,
+        .sparkle::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            background: rgba(255, 248, 220, 0.7);
+            transform: translate(-50%, -50%);
+            border-radius: 999px;
+        }
+        .sparkle::before {
+            width: 1px;
+            height: 170%;
+        }
+        .sparkle::after {
+            width: 170%;
+            height: 1px;
+        }
+        .sparkle-one {
+            top: 12%;
+            left: 10%;
+            width: 12px;
+            height: 12px;
+            animation-delay: 0s;
+        }
+        .sparkle-two {
+            top: 24%;
+            right: 14%;
+            width: 16px;
+            height: 16px;
+            animation-delay: 2.5s;
+            animation-duration: 12s;
+        }
+        .sparkle-three {
+            top: 56%;
+            left: 6%;
+            width: 10px;
+            height: 10px;
+            animation-delay: 1.5s;
+            animation-duration: 11s;
+        }
+        .sparkle-four {
+            top: 70%;
+            right: 9%;
+            width: 14px;
+            height: 14px;
+            animation-delay: 4s;
+        }
+        .sparkle-five {
+            top: 82%;
+            left: 26%;
+            width: 9px;
+            height: 9px;
+            animation-delay: 6s;
+            animation-duration: 13s;
+        }
+        @keyframes twinkleFloat {
+            0%, 100% {
+                opacity: 0;
+                transform: translate3d(0, 18px, 0) scale(0.85);
+            }
+            20% {
+                opacity: 0.45;
+            }
+            50% {
+                opacity: 0.95;
+                transform: translate3d(0, -10px, 0) scale(1);
+            }
+            80% {
+                opacity: 0.35;
+            }
+        }
         h1, h2, h3 {
             font-family: 'Playfair Display', serif;
             color: #99612A; /* Honey bronze */
@@ -228,6 +315,13 @@
     </style>
 </head>
 <body>
+    <div class="sparkles" aria-hidden="true">
+        <span class="sparkle sparkle-one"></span>
+        <span class="sparkle sparkle-two"></span>
+        <span class="sparkle sparkle-three"></span>
+        <span class="sparkle sparkle-four"></span>
+        <span class="sparkle sparkle-five"></span>
+    </div>
     <div class="container">
         <!-- Matching Hero Image -->
         <div class="hero-wrap">
