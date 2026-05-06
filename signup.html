@@ -381,7 +381,25 @@
             background: linear-gradient(90deg, rgba(217, 164, 65, 0), rgba(217, 164, 65, 0.95), rgba(217, 164, 65, 0));
         }
         .input-group {
+            position: relative;
             margin-bottom: 25px;
+        }
+        .input-group::after {
+            content: "";
+            position: absolute;
+            top: 44px;
+            right: 16px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.95) 0%, rgba(255, 241, 193, 0.82) 45%, rgba(255, 241, 193, 0) 72%);
+            box-shadow: 0 0 14px rgba(255, 228, 153, 0.45);
+            opacity: 0;
+            animation: twinkleFloat 9s ease-in-out infinite;
+            pointer-events: none;
+        }
+        .input-group:nth-of-type(2)::after {
+            animation-delay: 2.6s;
         }
         .input-group label {
             display: block;
@@ -397,7 +415,9 @@
             border-radius: 8px;
             font-size: 16px;
             font-family: 'Lato', sans-serif;
-            background-color: #FFFBEF;
+            background:
+                linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(255, 251, 239, 0.98)),
+                #FFFBEF;
             box-sizing: border-box;
             transition: all 0.3s ease;
         }
@@ -405,7 +425,7 @@
             outline: none;
             border-color: #D9A441;
             background-color: #ffffff;
-            box-shadow: 0 0 0 3px rgba(217, 164, 65, 0.12);
+            box-shadow: 0 0 0 3px rgba(217, 164, 65, 0.12), 0 0 22px rgba(255, 226, 145, 0.18);
         }
         .signup-button {
             display: block;

@@ -10,8 +10,67 @@
             margin: 0;
             padding: 0;
             font-family: 'Lato', sans-serif;
-            background-color: #FFF8E8; /* Sunlit cream */
+            position: relative;
+            overflow-x: hidden;
+            background:
+                radial-gradient(circle at top left, rgba(255, 244, 208, 0.9), transparent 32%),
+                radial-gradient(circle at 84% 12%, rgba(255, 236, 171, 0.55), transparent 24%),
+                #FFF8E8; /* Sunlit cream */
             color: #4F4034; /* Warm walnut for readability */
+        }
+        body::before,
+        body::after {
+            content: "";
+            position: fixed;
+            width: 240px;
+            height: 240px;
+            border-radius: 50%;
+            filter: blur(22px);
+            opacity: 0.45;
+            pointer-events: none;
+            z-index: 0;
+        }
+        body::before {
+            top: 24px;
+            left: -90px;
+            background: rgba(255, 236, 171, 0.6);
+        }
+        body::after {
+            right: -80px;
+            bottom: 40px;
+            background: rgba(248, 209, 140, 0.4);
+        }
+        @keyframes glimmerDrift {
+            0%, 100% {
+                opacity: 0;
+                transform: translate3d(0, 16px, 0) scale(0.85);
+            }
+            30% {
+                opacity: 0.4;
+            }
+            50% {
+                opacity: 0.85;
+                transform: translate3d(0, -8px, 0) scale(1);
+            }
+            80% {
+                opacity: 0.25;
+            }
+        }
+        @keyframes cardGleam {
+            0% {
+                transform: translateX(-145%) skewX(-18deg);
+                opacity: 0;
+            }
+            20% {
+                opacity: 0.12;
+            }
+            42% {
+                opacity: 0.32;
+            }
+            100% {
+                transform: translateX(175%) skewX(-18deg);
+                opacity: 0;
+            }
         }
         h1, h2, h3 {
             font-family: 'Playfair Display', serif;
@@ -21,10 +80,12 @@
             width: 100%;
             max-width: 600px;
             margin: 0 auto;
+            position: relative;
             background-color: #ffffff;
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 4px 25px rgba(153, 97, 42, 0.07);
+            z-index: 1;
         }
         .hero-img {
             width: 100%;
@@ -32,23 +93,101 @@
             display: block;
         }
         .header {
-            background-color: #FFF1CC; /* Soft butter yellow */
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(180deg, #FFF4D8 0%, #FFF0C8 100%);
             padding: 40px;
             text-align: center;
             border-bottom: 1px solid #F2DE9C;
         }
+        .header::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 320px;
+            height: 140px;
+            transform: translate(-50%, -50%);
+            background: radial-gradient(circle, rgba(255, 245, 196, 0.8) 0%, rgba(255, 236, 171, 0.34) 44%, rgba(255, 236, 171, 0) 78%);
+            filter: blur(10px);
+            pointer-events: none;
+        }
         .header h1 {
+            position: relative;
             font-size: 32px;
             margin: 0;
             color: #A86A1F; /* Warm amber */
             font-weight: 400;
             letter-spacing: 1px;
+            text-shadow: 0 0 18px rgba(255, 240, 184, 0.55);
         }
         .body-content {
             padding: 50px 40px;
             line-height: 1.8;
             font-size: 18px;
             color: #5F5044;
+        }
+        .glimmers {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .glimmer {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.95) 0%, rgba(255, 242, 196, 0.7) 45%, rgba(255, 242, 196, 0) 72%);
+            box-shadow: 0 0 18px rgba(255, 233, 168, 0.42);
+            opacity: 0;
+            animation: glimmerDrift 10s ease-in-out infinite;
+        }
+        .glimmer::before,
+        .glimmer::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 248, 220, 0.72);
+            border-radius: 999px;
+        }
+        .glimmer::before {
+            width: 1px;
+            height: 170%;
+        }
+        .glimmer::after {
+            width: 170%;
+            height: 1px;
+        }
+        .glimmer-one {
+            top: 9%;
+            left: 9%;
+            width: 12px;
+            height: 12px;
+            animation-delay: 0s;
+        }
+        .glimmer-two {
+            top: 22%;
+            right: 11%;
+            width: 14px;
+            height: 14px;
+            animation-delay: 2s;
+            animation-duration: 12s;
+        }
+        .glimmer-three {
+            top: 58%;
+            left: 7%;
+            width: 9px;
+            height: 9px;
+            animation-delay: 4.5s;
+        }
+        .glimmer-four {
+            top: 76%;
+            right: 15%;
+            width: 11px;
+            height: 11px;
+            animation-delay: 6s;
+            animation-duration: 11s;
         }
         .feature-grid {
             padding: 0 40px 40px 40px;
@@ -65,7 +204,9 @@
         }
         .cta-button {
             display: inline-block;
-            background-color: #D9A441; /* Honey gold */
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #D9A441 0%, #E1B14C 45%, #C98A1D 100%); /* Honey gold */
             color: #ffffff;
             text-decoration: none;
             padding: 18px 40px;
@@ -76,10 +217,36 @@
             transition: all 0.4s ease;
             box-shadow: 0 4px 15px rgba(217, 164, 65, 0.25);
         }
+        .cta-button::before {
+            content: "";
+            position: absolute;
+            inset: -35% auto -35% -20%;
+            width: 34%;
+            background: linear-gradient(115deg, rgba(255, 255, 255, 0) 15%, rgba(255, 248, 212, 0.95) 48%, rgba(255, 255, 255, 0) 82%);
+            opacity: 0;
+            transform: translateX(-145%) skewX(-22deg);
+            animation: cardGleam 5.8s ease-in-out infinite;
+        }
         .cta-button:hover {
-            background-color: #BF861B;
+            background: linear-gradient(135deg, #D19A2B 0%, #E5B750 45%, #BF861B 100%);
             transform: translateY(-1px);
             box-shadow: 0 6px 20px rgba(191, 134, 27, 0.3);
+        }
+        .review-card {
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 24px rgba(191, 134, 27, 0.06);
+        }
+        .review-card::after {
+            content: "";
+            position: absolute;
+            inset: -30% auto -30% -24%;
+            width: 28%;
+            background: linear-gradient(115deg, rgba(255, 255, 255, 0) 10%, rgba(255, 250, 227, 0.72) 48%, rgba(255, 255, 255, 0) 85%);
+            opacity: 0;
+            transform: translateX(-145%) skewX(-18deg);
+            animation: cardGleam 8.5s ease-in-out infinite;
+            pointer-events: none;
         }
         .footer {
             background-color: #FFF3D9;
@@ -106,6 +273,12 @@
         <tr>
             <td align="center">
                 <div class="container">
+                    <div class="glimmers" aria-hidden="true">
+                        <span class="glimmer glimmer-one"></span>
+                        <span class="glimmer glimmer-two"></span>
+                        <span class="glimmer glimmer-three"></span>
+                        <span class="glimmer glimmer-four"></span>
+                    </div>
                     <!-- Hero Image -->
                     <img src="https://images.unsplash.com/photo-1545208393-216c7fb1bba0?auto=format&fit=crop&q=80&w=1200" alt="Serene Wellness Scene" class="hero-img">
 
@@ -140,11 +313,11 @@
                     <!-- Reviews Section -->
                     <div style="padding: 0 40px 40px 40px; text-align: center;">
                         <h2 style="font-size: 22px; color: #A86A1F; margin-bottom: 30px; font-weight: 400;">What Others Say?</h2>
-                        <div style="margin-bottom: 30px; padding: 25px; background-color: #FFFBEF; border-radius: 12px; border-left: 4px solid #D9A441;">
+                        <div class="review-card" style="margin-bottom: 30px; padding: 25px; background-color: #FFFBEF; border-radius: 12px; border-left: 4px solid #D9A441;">
                             <p style="font-style: italic; color: #5F5044; margin: 0;">"The weekly meditations have become my anchor. I feel more centered and present than I have in years."</p>
                             <p style="margin-top: 15px; font-weight: 700; color: #A86A1F; font-size: 14px;">— Sarah M.</p>
                         </div>
-                        <div style="padding: 25px; background-color: #FFFBEF; border-radius: 12px; border-left: 4px solid #D9A441;">
+                        <div class="review-card" style="padding: 25px; background-color: #FFFBEF; border-radius: 12px; border-left: 4px solid #D9A441;">
                             <p style="font-style: italic; color: #5F5044; margin: 0;">"The self-care rituals are so simple yet so powerful. This community truly understands the journey to peace."</p>
                             <p style="margin-top: 15px; font-weight: 700; color: #A86A1F; font-size: 14px;">— David L.</p>
                         </div>
