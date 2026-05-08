@@ -26,19 +26,19 @@
             height: 240px;
             border-radius: 50%;
             filter: blur(22px);
-            opacity: 0.45;
+            opacity: 0.3;
             pointer-events: none;
             z-index: 0;
         }
         body::before {
             top: 24px;
             left: -90px;
-            background: rgba(255, 236, 171, 0.6);
+            background: rgba(255, 236, 171, 0.42);
         }
         body::after {
             right: -80px;
             bottom: 40px;
-            background: rgba(248, 209, 140, 0.4);
+            background: rgba(248, 209, 140, 0.28);
         }
         @keyframes glimmerDrift {
             0%, 100% {
@@ -46,14 +46,14 @@
                 transform: translate3d(0, 16px, 0) scale(0.85);
             }
             30% {
-                opacity: 0.4;
+                opacity: 0.22;
             }
             50% {
-                opacity: 0.85;
+                opacity: 0.5;
                 transform: translate3d(0, -8px, 0) scale(1);
             }
             80% {
-                opacity: 0.25;
+                opacity: 0.12;
             }
         }
         @keyframes cardGleam {
@@ -62,10 +62,10 @@
                 opacity: 0;
             }
             20% {
-                opacity: 0.12;
+                opacity: 0.07;
             }
             42% {
-                opacity: 0.32;
+                opacity: 0.18;
             }
             100% {
                 transform: translateX(175%) skewX(-18deg);
@@ -108,8 +108,8 @@
             width: 320px;
             height: 140px;
             transform: translate(-50%, -50%);
-            background: radial-gradient(circle, rgba(255, 245, 196, 0.8) 0%, rgba(255, 236, 171, 0.34) 44%, rgba(255, 236, 171, 0) 78%);
-            filter: blur(10px);
+            background: radial-gradient(circle, rgba(255, 245, 196, 0.55) 0%, rgba(255, 236, 171, 0.2) 44%, rgba(255, 236, 171, 0) 78%);
+            filter: blur(14px);
             pointer-events: none;
         }
         .header h1 {
@@ -119,7 +119,7 @@
             color: #A86A1F; /* Warm amber */
             font-weight: 400;
             letter-spacing: 1px;
-            text-shadow: 0 0 18px rgba(255, 240, 184, 0.55);
+            text-shadow: 0 0 12px rgba(255, 240, 184, 0.28);
         }
         .body-content {
             padding: 50px 40px;
@@ -136,10 +136,10 @@
         .glimmer {
             position: absolute;
             border-radius: 50%;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.95) 0%, rgba(255, 242, 196, 0.7) 45%, rgba(255, 242, 196, 0) 72%);
-            box-shadow: 0 0 18px rgba(255, 233, 168, 0.42);
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(255, 242, 196, 0.48) 45%, rgba(255, 242, 196, 0) 72%);
+            box-shadow: 0 0 12px rgba(255, 233, 168, 0.22);
             opacity: 0;
-            animation: glimmerDrift 10s ease-in-out infinite;
+            animation: glimmerDrift 14s ease-in-out infinite;
         }
         .glimmer::before,
         .glimmer::after {
@@ -148,7 +148,7 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background: rgba(255, 248, 220, 0.72);
+            background: rgba(255, 248, 220, 0.45);
             border-radius: 999px;
         }
         .glimmer::before {
@@ -206,7 +206,7 @@
             display: inline-block;
             position: relative;
             overflow: hidden;
-            background: linear-gradient(135deg, #D9A441 0%, #E1B14C 45%, #C98A1D 100%); /* Honey gold */
+            background: linear-gradient(135deg, #D7A650 0%, #DEB86A 45%, #CA9538 100%); /* Honey gold */
             color: #ffffff;
             text-decoration: none;
             padding: 18px 40px;
@@ -215,37 +215,37 @@
             font-weight: 700;
             letter-spacing: 1px;
             transition: all 0.4s ease;
-            box-shadow: 0 4px 15px rgba(217, 164, 65, 0.25);
+            box-shadow: 0 4px 12px rgba(217, 164, 65, 0.18);
         }
         .cta-button::before {
             content: "";
             position: absolute;
             inset: -35% auto -35% -20%;
             width: 34%;
-            background: linear-gradient(115deg, rgba(255, 255, 255, 0) 15%, rgba(255, 248, 212, 0.95) 48%, rgba(255, 255, 255, 0) 82%);
+            background: linear-gradient(115deg, rgba(255, 255, 255, 0) 15%, rgba(255, 248, 212, 0.68) 48%, rgba(255, 255, 255, 0) 82%);
             opacity: 0;
             transform: translateX(-145%) skewX(-22deg);
-            animation: cardGleam 5.8s ease-in-out infinite;
+            animation: cardGleam 8.5s ease-in-out infinite;
         }
         .cta-button:hover {
-            background: linear-gradient(135deg, #D19A2B 0%, #E5B750 45%, #BF861B 100%);
+            background: linear-gradient(135deg, #D3A045 0%, #E1B45D 45%, #C18C2C 100%);
             transform: translateY(-1px);
-            box-shadow: 0 6px 20px rgba(191, 134, 27, 0.3);
+            box-shadow: 0 6px 16px rgba(191, 134, 27, 0.22);
         }
         .review-card {
             position: relative;
             overflow: hidden;
-            box-shadow: 0 10px 24px rgba(191, 134, 27, 0.06);
+            box-shadow: 0 8px 18px rgba(191, 134, 27, 0.04);
         }
         .review-card::after {
             content: "";
             position: absolute;
             inset: -30% auto -30% -24%;
             width: 28%;
-            background: linear-gradient(115deg, rgba(255, 255, 255, 0) 10%, rgba(255, 250, 227, 0.72) 48%, rgba(255, 255, 255, 0) 85%);
+            background: linear-gradient(115deg, rgba(255, 255, 255, 0) 10%, rgba(255, 250, 227, 0.46) 48%, rgba(255, 255, 255, 0) 85%);
             opacity: 0;
             transform: translateX(-145%) skewX(-18deg);
-            animation: cardGleam 8.5s ease-in-out infinite;
+            animation: cardGleam 11s ease-in-out infinite;
             pointer-events: none;
         }
         .footer {

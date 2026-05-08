@@ -28,18 +28,18 @@
             border-radius: 50%;
             pointer-events: none;
             filter: blur(22px);
-            opacity: 0.55;
+            opacity: 0.36;
             z-index: 0;
         }
         body::before {
             top: 40px;
             left: -90px;
-            background: rgba(255, 233, 168, 0.65);
+            background: rgba(255, 233, 168, 0.42);
         }
         body::after {
             right: -80px;
             bottom: 40px;
-            background: rgba(248, 209, 140, 0.45);
+            background: rgba(248, 209, 140, 0.28);
         }
         .sparkles {
             position: fixed;
@@ -53,18 +53,18 @@
             position: absolute;
             inset: 0;
             background:
-                radial-gradient(circle at 20% 18%, rgba(255, 249, 221, 0.32), transparent 18%),
-                radial-gradient(circle at 78% 26%, rgba(255, 244, 208, 0.24), transparent 16%),
-                radial-gradient(circle at 34% 76%, rgba(255, 240, 198, 0.18), transparent 14%);
-            opacity: 0.8;
+                radial-gradient(circle at 20% 18%, rgba(255, 249, 221, 0.22), transparent 18%),
+                radial-gradient(circle at 78% 26%, rgba(255, 244, 208, 0.16), transparent 16%),
+                radial-gradient(circle at 34% 76%, rgba(255, 240, 198, 0.12), transparent 14%);
+            opacity: 0.58;
         }
         .sparkle {
             position: absolute;
             border-radius: 50%;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.95) 0%, rgba(255, 242, 196, 0.75) 40%, rgba(255, 242, 196, 0) 72%);
-            box-shadow: 0 0 18px rgba(255, 233, 168, 0.5);
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.82) 0%, rgba(255, 242, 196, 0.5) 40%, rgba(255, 242, 196, 0) 72%);
+            box-shadow: 0 0 12px rgba(255, 233, 168, 0.24);
             opacity: 0;
-            animation: twinkleFloat 8s ease-in-out infinite;
+            animation: twinkleFloat 13s ease-in-out infinite;
         }
         .sparkle::before,
         .sparkle::after {
@@ -72,7 +72,7 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            background: rgba(255, 248, 220, 0.7);
+            background: rgba(255, 248, 220, 0.42);
             transform: translate(-50%, -50%);
             border-radius: 999px;
         }
@@ -152,14 +152,14 @@
                 transform: translate3d(0, 18px, 0) scale(0.85);
             }
             20% {
-                opacity: 0.5;
+                opacity: 0.24;
             }
             50% {
-                opacity: 0.9;
+                opacity: 0.56;
                 transform: translate3d(0, -10px, 0) scale(1);
             }
             80% {
-                opacity: 0.35;
+                opacity: 0.14;
             }
         }
         @keyframes shimmerSweep {
@@ -168,10 +168,10 @@
                 opacity: 0;
             }
             18% {
-                opacity: 0.35;
+                opacity: 0.16;
             }
             34% {
-                opacity: 0.12;
+                opacity: 0.06;
             }
             100% {
                 transform: translateX(165%) skewX(-18deg);
@@ -180,12 +180,12 @@
         }
         @keyframes haloPulse {
             0%, 100% {
-                opacity: 0.45;
+                opacity: 0.24;
                 transform: scale(0.98);
             }
             50% {
-                opacity: 0.8;
-                transform: scale(1.03);
+                opacity: 0.42;
+                transform: scale(1.015);
             }
         }
         @keyframes goldenSweep {
@@ -194,13 +194,13 @@
                 opacity: 0;
             }
             18% {
-                opacity: 0.12;
+                opacity: 0.06;
             }
             42% {
-                opacity: 0.48;
+                opacity: 0.22;
             }
             62% {
-                opacity: 0.18;
+                opacity: 0.08;
             }
             100% {
                 transform: translateX(170%) skewX(-22deg);
@@ -243,9 +243,9 @@
             position: absolute;
             inset: -20% auto 0 -30%;
             width: 42%;
-            background: linear-gradient(115deg, rgba(255, 255, 255, 0) 10%, rgba(255, 250, 231, 0.5) 48%, rgba(255, 255, 255, 0) 85%);
+            background: linear-gradient(115deg, rgba(255, 255, 255, 0) 10%, rgba(255, 250, 231, 0.28) 48%, rgba(255, 255, 255, 0) 85%);
             z-index: 1;
-            animation: shimmerSweep 9s ease-in-out infinite;
+            animation: shimmerSweep 12s ease-in-out infinite;
         }
         .hero-wrap::after {
             content: "";
@@ -342,8 +342,8 @@
             position: absolute;
             inset: -18%;
             border-radius: 28px;
-            background: radial-gradient(circle, rgba(255, 244, 204, 0.45) 0%, rgba(255, 244, 204, 0) 62%);
-            animation: haloPulse 8s ease-in-out infinite;
+            background: radial-gradient(circle, rgba(255, 244, 204, 0.24) 0%, rgba(255, 244, 204, 0) 62%);
+            animation: haloPulse 10s ease-in-out infinite;
             z-index: 0;
         }
         .dream-intro::after {
@@ -354,10 +354,10 @@
             width: 14px;
             height: 14px;
             border-radius: 50%;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.95) 0%, rgba(255, 242, 196, 0.8) 45%, rgba(255, 242, 196, 0) 72%);
-            box-shadow: 0 0 16px rgba(255, 228, 153, 0.55);
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.82) 0%, rgba(255, 242, 196, 0.54) 45%, rgba(255, 242, 196, 0) 72%);
+            box-shadow: 0 0 10px rgba(255, 228, 153, 0.24);
             opacity: 0;
-            animation: twinkleFloat 7.5s ease-in-out infinite 1s;
+            animation: twinkleFloat 11s ease-in-out infinite 1s;
         }
         .dream-intro > * {
             position: relative;
@@ -392,10 +392,10 @@
             width: 10px;
             height: 10px;
             border-radius: 50%;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.95) 0%, rgba(255, 241, 193, 0.82) 45%, rgba(255, 241, 193, 0) 72%);
-            box-shadow: 0 0 14px rgba(255, 228, 153, 0.45);
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(255, 241, 193, 0.5) 45%, rgba(255, 241, 193, 0) 72%);
+            box-shadow: 0 0 10px rgba(255, 228, 153, 0.2);
             opacity: 0;
-            animation: twinkleFloat 9s ease-in-out infinite;
+            animation: twinkleFloat 13s ease-in-out infinite;
             pointer-events: none;
         }
         .input-group:nth-of-type(2)::after {
@@ -425,7 +425,7 @@
             outline: none;
             border-color: #D9A441;
             background-color: #ffffff;
-            box-shadow: 0 0 0 3px rgba(217, 164, 65, 0.12), 0 0 22px rgba(255, 226, 145, 0.18);
+            box-shadow: 0 0 0 3px rgba(217, 164, 65, 0.1), 0 0 14px rgba(255, 226, 145, 0.1);
         }
         .signup-button {
             display: block;
@@ -433,7 +433,7 @@
             position: relative;
             overflow: hidden;
             isolation: isolate;
-            background: linear-gradient(135deg, #D9A441 0%, #E1B14C 45%, #C98A1D 100%);
+            background: linear-gradient(135deg, #D7A650 0%, #DEB86A 45%, #CA9538 100%);
             color: #ffffff;
             text-decoration: none;
             text-align: center;
@@ -446,17 +446,17 @@
             cursor: pointer;
             transition: all 0.3s ease;
             font-family: 'Lato', sans-serif;
-            box-shadow: 0 8px 20px rgba(217, 164, 65, 0.28);
+            box-shadow: 0 8px 18px rgba(217, 164, 65, 0.18);
         }
         .signup-button::before {
             content: "";
             position: absolute;
             inset: -35% auto -35% -20%;
             width: 34%;
-            background: linear-gradient(115deg, rgba(255, 255, 255, 0) 15%, rgba(255, 248, 212, 0.95) 48%, rgba(255, 255, 255, 0) 82%);
+            background: linear-gradient(115deg, rgba(255, 255, 255, 0) 15%, rgba(255, 248, 212, 0.64) 48%, rgba(255, 255, 255, 0) 82%);
             opacity: 0;
             transform: translateX(-145%) skewX(-22deg);
-            animation: goldenSweep 5.8s ease-in-out infinite;
+            animation: goldenSweep 8.8s ease-in-out infinite;
             pointer-events: none;
             z-index: 0;
         }
@@ -465,14 +465,14 @@
             position: absolute;
             inset: 1px;
             border-radius: 50px;
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0));
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
             pointer-events: none;
             z-index: 0;
         }
         .signup-button:hover {
-            background: linear-gradient(135deg, #D19A2B 0%, #E5B750 45%, #BF861B 100%);
+            background: linear-gradient(135deg, #D3A045 0%, #E1B45D 45%, #C18C2C 100%);
             transform: translateY(-1px);
-            box-shadow: 0 10px 24px rgba(191, 134, 27, 0.34);
+            box-shadow: 0 10px 20px rgba(191, 134, 27, 0.24);
         }
         .footer {
             background-color: #FFF3D9;
