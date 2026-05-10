@@ -13,9 +13,9 @@
             position: relative;
             overflow-x: hidden;
             background:
-                radial-gradient(circle at top left, rgba(255, 244, 208, 0.9), transparent 32%),
-                radial-gradient(circle at 84% 12%, rgba(255, 236, 171, 0.55), transparent 24%),
-                #d7c8a6; /* Sunlit cream */
+                radial-gradient(circle at top left, rgba(255, 246, 220, 0.62), transparent 32%),
+                radial-gradient(circle at 84% 12%, rgba(255, 239, 188, 0.34), transparent 24%),
+                #F6EFE2; /* Soft oat cream */
             color: #4F4034; /* Warm walnut for readability */
         }
         body::before,
@@ -25,20 +25,20 @@
             width: 240px;
             height: 240px;
             border-radius: 50%;
-            filter: blur(22px);
-            opacity: 0.3;
+            filter: blur(28px);
+            opacity: 0.2;
             pointer-events: none;
             z-index: 0;
         }
         body::before {
             top: 24px;
             left: -90px;
-            background: rgba(255, 236, 171, 0.42);
+            background: rgba(255, 236, 171, 0.26);
         }
         body::after {
             right: -80px;
             bottom: 40px;
-            background: rgba(248, 209, 140, 0.28);
+            background: rgba(248, 209, 140, 0.18);
         }
         @keyframes glimmerDrift {
             0%, 100% {
@@ -81,10 +81,10 @@
             max-width: 600px;
             margin: 0 auto;
             position: relative;
-            background-color: #ffffff;
+            background-color: rgba(255, 253, 248, 0.96);
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 4px 25px rgba(153, 97, 42, 0.07);
+            box-shadow: 0 8px 26px rgba(133, 96, 52, 0.045);
             z-index: 1;
         }
         .hero-img {
@@ -95,10 +95,10 @@
         .header {
             position: relative;
             overflow: hidden;
-            background: linear-gradient(180deg, #FFF4D8 0%, #FFF0C8 100%);
+            background: linear-gradient(180deg, #FAF1DE 0%, #F7ECD6 100%);
             padding: 40px;
             text-align: center;
-            border-bottom: 1px solid #F2DE9C;
+            border-bottom: 1px solid rgba(224, 202, 154, 0.55);
         }
         .header::before {
             content: "";
@@ -108,18 +108,18 @@
             width: 320px;
             height: 140px;
             transform: translate(-50%, -50%);
-            background: radial-gradient(circle, rgba(255, 245, 196, 0.55) 0%, rgba(255, 236, 171, 0.2) 44%, rgba(255, 236, 171, 0) 78%);
-            filter: blur(14px);
+            background: radial-gradient(circle, rgba(255, 245, 196, 0.36) 0%, rgba(255, 236, 171, 0.12) 44%, rgba(255, 236, 171, 0) 78%);
+            filter: blur(18px);
             pointer-events: none;
         }
         .header h1 {
             position: relative;
             font-size: 32px;
             margin: 0;
-            color: #A86A1F; /* Warm amber */
+            color: #9C723C; /* Soft amber */
             font-weight: 400;
             letter-spacing: 1px;
-            text-shadow: 0 0 12px rgba(255, 240, 184, 0.28);
+            text-shadow: 0 0 8px rgba(255, 240, 184, 0.16);
         }
         .body-content {
             padding: 50px 40px;
@@ -206,7 +206,7 @@
             display: inline-block;
             position: relative;
             overflow: hidden;
-            background: linear-gradient(135deg, #D7A650 0%, #DEB86A 45%, #CA9538 100%); /* Honey gold */
+            background: linear-gradient(135deg, #D0A866 0%, #D9B67D 45%, #C79753 100%); /* Muted honey gold */
             color: #ffffff;
             text-decoration: none;
             padding: 18px 40px;
@@ -215,27 +215,27 @@
             font-weight: 700;
             letter-spacing: 1px;
             transition: all 0.4s ease;
-            box-shadow: 0 4px 12px rgba(217, 164, 65, 0.18);
+            box-shadow: 0 6px 14px rgba(190, 144, 66, 0.12);
         }
         .cta-button::before {
             content: "";
             position: absolute;
             inset: -35% auto -35% -20%;
             width: 34%;
-            background: linear-gradient(115deg, rgba(255, 255, 255, 0) 15%, rgba(255, 248, 212, 0.68) 48%, rgba(255, 255, 255, 0) 82%);
+            background: linear-gradient(115deg, rgba(255, 255, 255, 0) 15%, rgba(255, 248, 212, 0.42) 48%, rgba(255, 255, 255, 0) 82%);
             opacity: 0;
             transform: translateX(-145%) skewX(-22deg);
-            animation: cardGleam 8.5s ease-in-out infinite;
+            animation: cardGleam 10.5s ease-in-out infinite;
         }
         .cta-button:hover {
-            background: linear-gradient(135deg, #D3A045 0%, #E1B45D 45%, #C18C2C 100%);
+            background: linear-gradient(135deg, #CB9F5A 0%, #D8AF70 45%, #BE8D48 100%);
             transform: translateY(-1px);
-            box-shadow: 0 6px 16px rgba(191, 134, 27, 0.22);
+            box-shadow: 0 8px 18px rgba(191, 134, 27, 0.16);
         }
         .review-card {
             position: relative;
             overflow: hidden;
-            box-shadow: 0 8px 18px rgba(191, 134, 27, 0.04);
+            box-shadow: 0 6px 14px rgba(191, 134, 27, 0.03);
         }
         .review-card::after {
             content: "";

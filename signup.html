@@ -14,9 +14,9 @@
             min-height: 100vh;
             font-family: 'Lato', sans-serif;
             background:
-                radial-gradient(circle at top left, rgba(255, 241, 204, 0.9), transparent 35%),
-                radial-gradient(circle at 85% 15%, rgba(255, 234, 188, 0.7), transparent 28%),
-                linear-gradient(180deg, #FFF9EE 0%, #FFF8E8 45%, #FFF5E1 100%);
+                radial-gradient(circle at top left, rgba(255, 243, 214, 0.58), transparent 35%),
+                radial-gradient(circle at 85% 15%, rgba(255, 236, 193, 0.32), transparent 28%),
+                linear-gradient(180deg, #FBF4E8 0%, #F8F1E5 45%, #F5EDE1 100%);
             color: #4F4034; /* Warm walnut */
         }
         body::before,
@@ -27,19 +27,19 @@
             height: 260px;
             border-radius: 50%;
             pointer-events: none;
-            filter: blur(22px);
-            opacity: 0.36;
+            filter: blur(28px);
+            opacity: 0.22;
             z-index: 0;
         }
         body::before {
             top: 40px;
             left: -90px;
-            background: rgba(255, 233, 168, 0.42);
+            background: rgba(255, 233, 168, 0.25);
         }
         body::after {
             right: -80px;
             bottom: 40px;
-            background: rgba(248, 209, 140, 0.28);
+            background: rgba(248, 209, 140, 0.16);
         }
         .sparkles {
             position: fixed;
@@ -53,18 +53,18 @@
             position: absolute;
             inset: 0;
             background:
-                radial-gradient(circle at 20% 18%, rgba(255, 249, 221, 0.22), transparent 18%),
-                radial-gradient(circle at 78% 26%, rgba(255, 244, 208, 0.16), transparent 16%),
-                radial-gradient(circle at 34% 76%, rgba(255, 240, 198, 0.12), transparent 14%);
-            opacity: 0.58;
+                radial-gradient(circle at 20% 18%, rgba(255, 249, 221, 0.14), transparent 18%),
+                radial-gradient(circle at 78% 26%, rgba(255, 244, 208, 0.1), transparent 16%),
+                radial-gradient(circle at 34% 76%, rgba(255, 240, 198, 0.08), transparent 14%);
+            opacity: 0.42;
         }
         .sparkle {
             position: absolute;
             border-radius: 50%;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.82) 0%, rgba(255, 242, 196, 0.5) 40%, rgba(255, 242, 196, 0) 72%);
-            box-shadow: 0 0 12px rgba(255, 233, 168, 0.24);
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.68) 0%, rgba(255, 242, 196, 0.34) 40%, rgba(255, 242, 196, 0) 72%);
+            box-shadow: 0 0 8px rgba(255, 233, 168, 0.14);
             opacity: 0;
-            animation: twinkleFloat 13s ease-in-out infinite;
+            animation: twinkleFloat 15s ease-in-out infinite;
         }
         .sparkle::before,
         .sparkle::after {
@@ -72,7 +72,7 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            background: rgba(255, 248, 220, 0.42);
+            background: rgba(255, 248, 220, 0.26);
             transform: translate(-50%, -50%);
             border-radius: 999px;
         }
@@ -216,11 +216,11 @@
             max-width: 600px;
             margin: 40px auto;
             position: relative;
-            background-color: #ffffff;
+            background-color: rgba(255, 253, 248, 0.96);
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 4px 25px rgba(153, 97, 42, 0.07);
-            border: 1px solid rgba(242, 222, 156, 0.55);
+            box-shadow: 0 8px 26px rgba(133, 96, 52, 0.045);
+            border: 1px solid rgba(230, 214, 184, 0.5);
             z-index: 1;
         }
         .container::before {
@@ -251,7 +251,7 @@
             content: "";
             position: absolute;
             inset: 0;
-            background: linear-gradient(180deg, rgba(255, 249, 238, 0.08) 0%, rgba(168, 106, 31, 0.18) 100%);
+            background: linear-gradient(180deg, rgba(255, 249, 238, 0.06) 0%, rgba(168, 106, 31, 0.12) 100%);
         }
         .hero-whisper {
             position: absolute;
@@ -278,10 +278,10 @@
         .header {
             position: relative;
             overflow: hidden;
-            background: linear-gradient(180deg, #FFF4D8 0%, #FFF0C8 100%);
+            background: linear-gradient(180deg, #FAF1DE 0%, #F7ECD6 100%);
             padding: 40px;
             text-align: center;
-            border-bottom: 1px solid #F2DE9C;
+            border-bottom: 1px solid rgba(224, 202, 154, 0.55);
         }
         .header::before {
             content: "";
@@ -291,9 +291,9 @@
             width: 320px;
             height: 150px;
             transform: translate(-50%, -50%);
-            background: radial-gradient(circle, rgba(255, 245, 196, 0.85) 0%, rgba(255, 236, 171, 0.38) 42%, rgba(255, 236, 171, 0) 76%);
-            filter: blur(10px);
-            opacity: 0.95;
+            background: radial-gradient(circle, rgba(255, 245, 196, 0.42) 0%, rgba(255, 236, 171, 0.16) 42%, rgba(255, 236, 171, 0) 76%);
+            filter: blur(16px);
+            opacity: 0.75;
             pointer-events: none;
         }
         .header::after {
@@ -304,9 +304,9 @@
             width: 220px;
             height: 70px;
             transform: translate(-50%, -50%);
-            background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 250, 227, 0.68), rgba(255, 255, 255, 0));
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 250, 227, 0.34), rgba(255, 255, 255, 0));
             filter: blur(14px);
-            opacity: 0.9;
+            opacity: 0.55;
             pointer-events: none;
         }
         .header h1 {
@@ -314,10 +314,10 @@
             z-index: 1;
             font-size: 32px;
             margin: 0;
-            color: #A86A1F; /* Warm amber */
+            color: #9C723C; /* Soft amber */
             font-weight: 400;
             letter-spacing: 1px;
-            text-shadow: 0 0 18px rgba(255, 240, 184, 0.6), 0 2px 10px rgba(201, 138, 29, 0.14);
+            text-shadow: 0 0 10px rgba(255, 240, 184, 0.18), 0 2px 8px rgba(201, 138, 29, 0.08);
         }
         .form-content {
             padding: 50px 40px;
@@ -331,10 +331,10 @@
             position: relative;
             text-align: center;
             color: #5F5044;
-            background: linear-gradient(180deg, rgba(255, 251, 239, 0.96) 0%, rgba(255, 247, 224, 0.92) 100%);
-            border: 1px solid rgba(242, 222, 156, 0.7);
+            background: linear-gradient(180deg, rgba(255, 251, 239, 0.94) 0%, rgba(249, 242, 227, 0.92) 100%);
+            border: 1px solid rgba(229, 214, 184, 0.6);
             border-radius: 20px;
-            box-shadow: 0 14px 35px rgba(191, 134, 27, 0.08);
+            box-shadow: 0 10px 24px rgba(191, 134, 27, 0.045);
             overflow: hidden;
         }
         .dream-intro::before {
@@ -433,7 +433,7 @@
             position: relative;
             overflow: hidden;
             isolation: isolate;
-            background: linear-gradient(135deg, #D7A650 0%, #DEB86A 45%, #CA9538 100%);
+            background: linear-gradient(135deg, #D0A866 0%, #D9B67D 45%, #C79753 100%);
             color: #ffffff;
             text-decoration: none;
             text-align: center;
@@ -446,7 +446,7 @@
             cursor: pointer;
             transition: all 0.3s ease;
             font-family: 'Lato', sans-serif;
-            box-shadow: 0 8px 18px rgba(217, 164, 65, 0.18);
+            box-shadow: 0 6px 14px rgba(190, 144, 66, 0.1);
         }
         .signup-button::before {
             content: "";
@@ -465,14 +465,14 @@
             position: absolute;
             inset: 1px;
             border-radius: 50px;
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0));
             pointer-events: none;
             z-index: 0;
         }
         .signup-button:hover {
-            background: linear-gradient(135deg, #D3A045 0%, #E1B45D 45%, #C18C2C 100%);
+            background: linear-gradient(135deg, #CB9F5A 0%, #D8AF70 45%, #BE8D48 100%);
             transform: translateY(-1px);
-            box-shadow: 0 10px 20px rgba(191, 134, 27, 0.24);
+            box-shadow: 0 8px 18px rgba(191, 134, 27, 0.14);
         }
         .footer {
             background-color: #FFF3D9;
